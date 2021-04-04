@@ -1,0 +1,105 @@
+* {
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+body {
+	min-height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: hsl(0, 0%, 95%);
+	flex-wrap: wrap;
+}
+.container {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	border: 1px solid transparent;
+	border-radius: 20px;
+	flex-wrap: wrap;
+}
+.container .card {
+	width: 279px;
+	height: 420px;
+	display: flex;
+	align-items: flex-start;
+	justify-content: space-evenly;
+	flex-direction: column;
+	padding: 35px;
+}
+.container .card:first-of-type {
+	background-color: hsl(31, 77%, 52%);
+	border-top-left-radius: 10px;
+	border-bottom-left-radius: 10px;
+}
+.container .card:nth-of-type(2) {
+	background-color: hsl(184, 100%, 22%);
+}
+.container .card:last-of-type {
+	background-color: hsl(179, 100%, 13%);
+	border-top-right-radius: 10px;
+	border-bottom-right-radius: 10px;
+}
+.container .card .img img {
+	width: 100%;
+}
+.container .card h1 {
+	font-weight: 700;
+	text-transform: uppercase;
+	font-family: 'Big Shoulders Display', cursive;
+	color: hsl(0, 0%, 95%);
+}
+
+.container .card p {
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 15px;
+	color: hsla(0, 0%, 100%, 0.75);
+}
+.container .card a {
+	font-family: 'Lexend Deca', sans-serif;
+	font-size: 15px;
+	text-decoration: none;
+	background-color: hsl(0, 0%, 95%);
+	padding: 10px 20px;
+	border-radius: 20px;
+	margin-top: 30px;
+	border: 2px solid hsl(0, 0%, 95%);
+}
+.container .card:first-of-type a {
+	color: hsl(31, 77%, 52%);
+}
+.container .card:nth-of-type(2) a {
+	color: hsl(184, 100%, 22%);
+}
+.container .card:last-of-type a {
+	color: hsl(179, 100%, 13%);
+}
+.container .card a:hover {
+	background-color: transparent;
+	color: hsl(0, 0%, 95%);
+}
+
+@media only screen and (max-width: 500px) {
+	body {
+		padding: 100px 0;
+	}
+	.container .card {
+		height: 350;
+		justify-content: space-between;
+	}
+	.container .card a {
+		margin-top: 0;
+	}
+	.container .card:first-of-type {
+		border-radius: 0;
+		border-top-left-radius: 10px;
+		border-top-right-radius: 10px;
+	}
+	.container .card:last-of-type {
+		border-radius: 0;
+		background-color: hsl(179, 100%, 13%);
+		border-bottom-left-radius: 10px;
+		border-bottom-right-radius: 10px;
+	}
+}
